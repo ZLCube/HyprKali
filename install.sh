@@ -67,5 +67,5 @@ chmod a+rw hyprland-source/ && cd hyprland-source
 sed -i 's/\/usr\/local/\/usr/g' config.mk
 sudo make install
 
-
+notify-send "HYPRLAND INSTALADO-INSTALLED"
 
