@@ -26,13 +26,13 @@ mkdir ~/Downloads/HyprSource
 #Copy libliftoff library to Hyprsource
 #Copiamos la libreria libliftoff a HyprSource
 
-cp $path/libliftoff-master.tar.gz ~/Downloads/HyprSource
+cp $path/pkg/libliftoff-master.tar.gz ~/Downloads/HyprSource
+cp $path/pkg/libxcb-errors-master.tar.gz ~/Downloads/HyprSource
 
 #Install principal dependencies for Hyprland
 #Instalamos las dependencias principales de Hyprland 
 
-sudo apt-get install -y meson xwayland wget build-essential ninja-build cmake-extras cmake gettext gettext-base fontconfig libfontconfig-dev libffi-dev libxml2-dev libdrm-dev libxkbcommon-x11-dev libxkbregistry-dev libxkbcommon-dev libpixman-1-dev libudev-dev libseat-dev seatd libxcb-dri3-dev libvulkan-dev libvulkan-volk-dev  vulkan-validationlayers-dev libvkfft-dev libgulkan-dev libegl-dev libgles2 libegl1-mesa-dev glslang-tools libinput-bin libinput-dev libxcb-composite0-dev libavutil-dev libavcodec-dev libavformat-dev libxcb-ewmh2 libxcb-ewmh-dev libxcb-present-dev libxcb-icccm4-dev libxcb-render-util0-dev libxcb-res0-dev libxcb-xinput-dev xdg-desktop-portal-wlr hwdata libliftoff-dev libwlroots-dev
-
+sudo apt-get install -y meson xwayland wget build-essential ninja-build cmake-extras cmake gettext gettext-base fontconfig libfontconfig-dev libffi-dev libxml2-dev libdrm-dev libxkbcommon-x11-dev libxkbregistry-dev libxkbcommon-dev libpixman-1-dev libudev-dev libseat-dev seatd libxcb-dri3-dev libvulkan-dev libvulkan-volk-dev  vulkan-validationlayers-dev libvkfft-dev libgulkan-dev libegl-dev libgles2 libegl1-mesa-dev glslang-tools libinput-bin libinput-dev libxcb-composite0-dev libavutil-dev libavcodec-dev libavformat-dev libxcb-ewmh2 libxcb-ewmh-dev libxcb-present-dev libxcb-icccm4-dev libxcb-render-util0-dev libxcb-res0-dev libxcb-xinput-dev xdg-desktop-portal-wlr hwdata libliftoff-dev libwlroots-dev edid-decode
 cd ~/Downloads && sudo apt-get install -y nala
 
 sudo nala install -y meson wget build-essential ninja-build cmake-extras cmake gettext gettext-base fontconfig libfontconfig-dev libffi-dev libxml2-dev libdrm-dev libxkbcommon-x11-dev libxkbregistry-dev libxkbcommon-dev libpixman-1-dev libudev-dev libseat-dev seatd libxcb-dri3-dev libvulkan-dev libvulkan-volk-dev  vulkan-validationlayers-dev libvkfft-dev libgulkan-dev libegl-dev libgles2 libegl1-mesa-dev glslang-tools libinput-bin libinput-dev libxcb-composite0-dev libavutil-dev libavcodec-dev libavformat-dev libxcb-ewmh2 libxcb-ewmh-dev libxcb-present-dev libxcb-icccm4-dev libxcb-render-util0-dev libxcb-res0-dev libxcb-xinput-dev libpango1.0-dev xdg-desktop-portal-wlr
@@ -49,9 +49,12 @@ wget https://gitlab.freedesktop.org/wayland/wayland/-/releases/1.22.0/downloads/
 wget https://gitlab.freedesktop.org/emersion/libdisplay-info/-/releases/0.1.1/downloads/libdisplay-info-0.1.1.tar.xz && tar -xvJf libdisplay-info-0.1.1.tar.xz && rm -r libdisplay-info-0.1.1.tar.xz
 
 tar -zxvf libliftoff-master.tar.gz && rm -r libliftoff-master.tar.gz
+tar -zxvf libxcb-errors-master.tar.gz && rm -r libxcb-errors-master.tar.gz
 
 #Lets compile the tar packages
 #Compilamos los paquetes tar instalados 
+
+cd libxcb-errors-master.tar.gz && meson setup build/ && ninja -C build/ && cd ..
 
 cd libliftoff-master && meson setup build/ && ninja -C build/ && cd ..
 
