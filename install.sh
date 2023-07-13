@@ -27,7 +27,6 @@ mkdir ~/Downloads/HyprSource
 #Copiamos la libreria libliftoff a HyprSource
 
 cp $path/pkg/libliftoff-master.tar.gz ~/Downloads/HyprSource
-cp $path/pkg/libxcb-errors-master.tar.gz ~/Downloads/HyprSource
 
 #Install principal dependencies for Hyprland
 #Instalamos las dependencias principales de Hyprland 
@@ -49,12 +48,9 @@ wget https://gitlab.freedesktop.org/wayland/wayland/-/releases/1.22.0/downloads/
 wget https://gitlab.freedesktop.org/emersion/libdisplay-info/-/releases/0.1.1/downloads/libdisplay-info-0.1.1.tar.xz && tar -xvJf libdisplay-info-0.1.1.tar.xz && rm -r libdisplay-info-0.1.1.tar.xz
 
 tar -zxvf libliftoff-master.tar.gz && rm -r libliftoff-master.tar.gz
-tar -zxvf libxcb-errors-master.tar.gz && rm -r libxcb-errors-master.tar.gz
 
 #Lets compile the tar packages
 #Compilamos los paquetes tar instalados 
-
-cd libxcb-errors-master && meson setup build/ && ninja -C build/ && cd ..
 
 cd libliftoff-master && meson setup build/ && ninja -C build/ && cd ..
 
