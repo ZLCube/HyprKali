@@ -1,5 +1,6 @@
 # HyprKali
 ------------------------------------------------ENGLISH-------------------------------------------------------------
+
 This script is an auto install for Hyprland on debian base, it could work on ubuntu, kali, parrot and any other stable debian base, however I am not sure if its stable the installation might break, try to take a snapshot before using it as well as update your system with sudo apt-get update && sudo apt-get upgrade.
 
 It should be noted that it still does not have dot files and this is only the installation of the environment.
