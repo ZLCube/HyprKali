@@ -18,10 +18,11 @@ Es una fase de pruebas y no es la version final.
 
 # Steps/Pasos
 
+'''
 git clone https://github.com/zlcube/HyprKali.git
 
 cd HyprKali
 
 chmod +x install.sh 
 
-./install.sh 
+./install.sh '''
