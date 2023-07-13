@@ -54,7 +54,7 @@ tar -zxvf libxcb-errors-master.tar.gz && rm -r libxcb-errors-master.tar.gz
 #Lets compile the tar packages
 #Compilamos los paquetes tar instalados 
 
-cd libxcb-errors-master.tar.gz && meson setup build/ && ninja -C build/ && cd ..
+cd libxcb-errors-master && meson setup build/ && ninja -C build/ && cd ..
 
 cd libliftoff-master && meson setup build/ && ninja -C build/ && cd ..
 
