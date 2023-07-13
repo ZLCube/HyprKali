@@ -15,3 +15,13 @@ Este script es un auto install para Hyprland en base debian, puede servir en ubu
 Cabe aclarar que aun no tiene dot files y esto solo es la instalacion del entorno.
 
 Es una fase de pruebas y no es la version final.
+
+# Steps/Pasos
+
+git clone https://github.com/zlcube/HyprKali.git
+
+cd HyprKali
+
+chmod +x install.sh 
+
+./install.sh 
