@@ -1,5 +1,17 @@
 #!/bin/bash
-
+#----------------------------------------------------------------------------------------#
+#---------------------------------CREATED BY: ZLCUB--------------------------------------#
+#                                    13/07/2023                                          #
+#        La explicacion de cada paso de la instalacion esta en español e ingles          #
+#      The explanation of each step of the installation is in Spanish and English        #
+#                       Social Media: https://linktr.ee/zlcube                           #
+#----------------------------------------------------------------------------------------#
+# DISCLAIMER: YOU ARE ALLOWED TO MODIFY AND DISTRIBUTE THIS SCRIPT GIVING THE APPROPIATE #
+#                                       CREDITS                                          #
+#                                                                                        #
+# AVISO: TIENES PERMISO DE MODIFICAR Y DISTRIBUIR ESTE CODIGO MIENTRAS ME DES CREDITO    #
+#                                CORRESPONDIENTE POR EL                                  #
+#----------------------------------------------------------------------------------------#
 if [ "$(whoami)" == "root" ]; then
     exit 1
 fi
